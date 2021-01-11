@@ -14,7 +14,7 @@ const fs = require("fs");
     strm.write('tm.doupak.cz');
     strm.end();
     console.log("CNAME created");
-    // Copying the file to a the same name
+    // Copy index.html as 404.html in order for URL routing to work properly on gh pages
     fs.copyFile(folderName + '/index.html', folderName + '/404.html', (err) => {
       if (err) {
         console.log("Error while creating 404 file: ", err);

@@ -5,11 +5,11 @@ const state = () => ({
 const getters = {}
 
 const actions = {
-    login() {
-      //
+    login(context) {
+      context.commit('SET_LOGGED', { isLogged: true })
     },
-    logout() {
-      //
+    logout(context) {
+      context.commit('SET_LOGGED', { isLogged: false })
     }
 }
 

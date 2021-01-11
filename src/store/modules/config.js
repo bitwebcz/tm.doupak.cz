@@ -1,4 +1,6 @@
-const state = () => ({})
+const state = () => ({
+    themeColor: 'green'
+})
 
 const getters = {}
 
