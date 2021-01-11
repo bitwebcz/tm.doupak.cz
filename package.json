@@ -1,0 +1,18 @@
+{
+  "name": "tm.doupak.cz",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "node scripts/gh-pages-deploy.js"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.0.4",
+    "@vue/compiler-sfc": "^3.0.5",
+    "execa": "^5.0.0",
+    "vite": "^2.0.0-beta.12"
+  }
+}
