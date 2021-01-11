@@ -1,10 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+    <component :is="this.$route.meta.layout || 'AppLayout'" />
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import AppLayout from "./layouts/AppLayout.vue";
+
+export default {
+  name: 'App',
+  components: {
+      AppLayout
+  }
+}
 </script>
 
 <style>
