@@ -14,6 +14,15 @@ const fs = require("fs");
     strm.write('tm.doupak.cz');
     strm.end();
     console.log("CNAME created");
+    // Copying the file to a the same name
+    fs.copyFile(folderName + '/index.html', folderName + '/404.html', (err) => {
+      if (err) {
+        console.log("Error while creating 404 file: ", err);
+      }
+      else {
+        console.log("404 created");
+      }
+    });
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
     await execa("git", ["--work-tree", folderName, "commit", "-m", "gh-pages"]);
     console.log("Pushing to gh-pages...");
